@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+        
+        stages{
+            stage ('GIT SCM') {
+                steps{
+					 echo "Inside Git"
+                }
+            }
+
+		    stage ('MVN INSATLL') {
+				steps{
+							echo "Inside MVN"
+				}
+			}
+		
+		    stage ('Build') {
+			    steps{
+					echo "Inside Build"
+				}
+			}	
+			
+		stage ('Deploy') {
+				steps{
+					echo "Inside Deploy"
+				}
+			}
+        }		
+    }
